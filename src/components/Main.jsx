@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
+import Home from '../pages/Home'
 import Index from '../pages/Index'
 import Show from '../pages/Show'
 
@@ -33,7 +34,8 @@ function Main() {
     return (
         <div>
             <Routes>
-                <Route exact path='/' 
+                <Route exact path='/' element={<Home />} />
+                <Route exact path='/notes' 
                 element={<Index notes={notes} createNotes={createNotes} />} />
                 <Route path='/notes/:id' element={<Show notes={notes} />} />
             </Routes>
