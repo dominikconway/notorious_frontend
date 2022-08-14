@@ -14,9 +14,6 @@ function Header() {
                 <Nav.Link>
                   <Link className='link' to='/notes'>My Notes</Link>
                 </Nav.Link>
-                <Nav.Link>
-                  <Link className='link' to='/notes/addnote'>Add a  Note</Link>
-                </Nav.Link>
               </Nav>
           </Container>
         </Navbar>

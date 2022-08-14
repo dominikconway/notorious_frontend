@@ -16,6 +16,10 @@ code {
 #home{
   padding-top: 15%;
 }
+
+#notepad{
+  padding: 5%;
+}
 .link{
   text-decoration: none;
   color: lightblue;
