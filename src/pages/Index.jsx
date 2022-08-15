@@ -61,6 +61,7 @@ function Index({createNotes, notes}) {
             value={newForm.title}
             name="title"
             placeholder="title"
+            required
             onChange={handleChange}
           />
           <input
@@ -68,6 +69,7 @@ function Index({createNotes, notes}) {
             value={newForm.memo}
             name="memo"
             placeholder="memo"
+            required
             onChange={handleChange}
           />
           <input
@@ -75,6 +77,7 @@ function Index({createNotes, notes}) {
             value={newForm.date}
             name="date"
             placeholder="date"
+            required
             onChange={handleChange}
           />
           <input type="submit" value="Create Note" />
