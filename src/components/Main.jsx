@@ -8,7 +8,7 @@ function Main() {
 
     const [notes, setNotes] = useState(null)
 
-    const URL = 'http://notorious-notes.herokuapp.com/notes'
+    const URL = 'http://notorious-notes.herokuapp.com/notes/'
 
     const getNotes = async () => {
         const response = await fetch(URL)
@@ -28,6 +28,24 @@ function Main() {
         getNotes()
     }
 
+    const updateNotes = async (note, id) => {
+        await fetch(URL + id, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'Application/json',
+            },
+            body: JSON.stringify(note)
+        })
+        getNotes()
+    }
+
+    const deleteNote = async (id) => {
+        await fetch(URL + id, {
+            method: "DELETE",
+        })
+        getNotes()
+    }
+
     useEffect(() => {getNotes()}, [])
     
 
@@ -36,8 +54,14 @@ function Main() {
             <Routes>
                 <Route exact path='/' element={<Home />} />
                 <Route exact path='/notes' 
-                element={<Index notes={notes} createNotes={createNotes} />} />
-                <Route path='/notes/:id' element={<Show notes={notes} />} />
+                element={<Index 
+                    notes={notes} 
+                    createNotes={createNotes} deleteNote={deleteNote} />} />
+                <Route path='/notes/:id' 
+                element={<Show 
+                    notes={notes} 
+                    deleteNote={deleteNote}
+                    updateNotes={updateNotes} />} />
             </Routes>
         </div>
     )

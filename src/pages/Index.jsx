@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
-import Row from 'react-bootstrap/Row';
 
-function Index(props) {
+function Index({createNotes, notes}) {
+
+ 
 
   const [newForm, setNewForm] = useState({
     title: '',
@@ -21,7 +20,7 @@ function Index(props) {
 
   const handleSubmit = (event) => {
     event.preventDefault()
-    props.createNotes(newForm)
+    createNotes(newForm)
     setNewForm({
       title: '',
       memo: '',
@@ -29,22 +28,24 @@ function Index(props) {
     })
   }
 
-
+  
 
     // loaded function
     const loaded = () => {
-      return props.notes.map((note) => (
+      return notes.map((note) => (
         <div key={note._id} className='row row-cols-2 row-cols-md-1'>
           <div className='row row-cols'>
             <div className='card'>
-          <Link className='link' to={`/note/${note._id}`}>
+          <Link className='link' to={`/notes/${note._id}`}>
             <h1>{note.title}</h1>
           </Link>
           <h3>{note.memo}</h3>
           <h3>{note.date}</h3>
             </div>
           </div>
+          {/* <button type='button' className='btn btn-danger' id='delete' onClick>delete</button> */}
         </div>
+        
       ))
     }
   
@@ -78,7 +79,7 @@ function Index(props) {
           />
           <input type="submit" value="Create Note" />
         </form>
-        {props.notes ? loaded() : loading()}
+        {notes ? loaded() : loading()}
       </section>
     )
   }
