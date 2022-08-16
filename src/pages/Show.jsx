@@ -35,7 +35,6 @@ function Show({notes, updateNotes, deleteNote}) {
 
   return (
     <div className="note-show-div">
-      
         <div className='note-title-bg'>
           <h1 className='note-title'>{note.title}</h1>
         </div>
