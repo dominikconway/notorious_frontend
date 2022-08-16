@@ -8,7 +8,7 @@ function Main() {
 
     const [notes, setNotes] = useState(null)
 
-    const URL = 'http://notorious-notes.herokuapp.com/notes/'
+    const URL = 'https://notorious-notes.herokuapp.com/notes/'
 
     const getNotes = async () => {
         const response = await fetch(URL)
