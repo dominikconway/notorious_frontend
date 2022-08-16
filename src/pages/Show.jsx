@@ -25,7 +25,7 @@ function Show({notes, updateNotes, deleteNote}) {
     event.preventDefault()
     updateNotes(editForm, note._id)
     // redirect people back to index
-    navigate("/")
+    navigate(`/notes/${id}`)
   }
 
   const removeNote = () => {
@@ -68,7 +68,6 @@ function Show({notes, updateNotes, deleteNote}) {
           name="date"
           placeholder="date"
           onChange={handleChange}
-          required
         />
         <input type="submit" class="btn btn-secondary" value= "Update Note" />
         </div>
