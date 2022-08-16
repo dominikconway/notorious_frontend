@@ -42,10 +42,11 @@ function Show({notes, updateNotes, deleteNote}) {
           <h2>{note.memo}</h2>
         </div>
         <div className='delete-button-container'>
-          {<button type='button' className='btn btn-danger' id='delete' onClick={removeNote}>DELETE Note</button>}
+          {<button type='button' className='btn btn-outline-danger' id='delete' onClick={removeNote}>DELETE Note</button>}
         </div>
       <form className='update-note-form' onSubmit={handleSubmit}>
-        <input
+        <div className='hstack gap-3'>
+        <input className='form-control me-auto'
           type="text"
           value={editForm.title}
           name="title"
@@ -53,7 +54,7 @@ function Show({notes, updateNotes, deleteNote}) {
           onChange={handleChange}
           required
         />
-        <input
+        <input className='form-control me-auto'
           type="text"
           value={editForm.memo}
           name="memo"
@@ -61,7 +62,7 @@ function Show({notes, updateNotes, deleteNote}) {
           onChange={handleChange}
           required
         />
-        <input
+        <input className='form-control me-auto'
           type="date"
           value={editForm.date}
           name="date"
@@ -69,7 +70,8 @@ function Show({notes, updateNotes, deleteNote}) {
           onChange={handleChange}
           required
         />
-        <input type="submit" value="Update Note" />
+        <input type="submit" class="btn btn-secondary" value= "Update Note" />
+        </div>
       </form>
     </div>
   )
