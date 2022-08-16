@@ -59,9 +59,10 @@ function Index({createNotes, notes}) {
     
   
     return (
-      <section>
+      <section className='add-note-form'>
         <form onSubmit={handleSubmit}>
-          <input
+          <div className='hstack gap-3'>
+          <input className='form-control me-auto'
             type="text"
             value={newForm.title}
             name="title"
@@ -69,7 +70,7 @@ function Index({createNotes, notes}) {
             required
             onChange={handleChange}
           />
-          <input
+          <input className='form-control me-auto'
             type="text"
             value={newForm.memo}
             name="memo"
@@ -77,7 +78,7 @@ function Index({createNotes, notes}) {
             required
             onChange={handleChange}
           />
-          <input
+          <input className='form-control me-auto'
             type="text"
             value={newForm.date}
             name="date"
@@ -85,8 +86,10 @@ function Index({createNotes, notes}) {
             required
             onChange={handleChange}
           />
-          <input type="submit" value="Create Note" />
+          <input type="submit" class="btn btn-secondary" value="Create Note" />
+          </div>
         </form>
+        
         {notes ? loaded() : loading()}
       </section>
     )
