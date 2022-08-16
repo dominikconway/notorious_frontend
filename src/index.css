@@ -13,15 +13,46 @@ code {
     monospace;
 }
 
-#home{
-  padding-top: 15%;
-}
-
-#notepad{
-  padding: 5%;
-}
 .link{
   text-decoration: none;
   color: lightblue;
 }
+
+#home{
+  padding-top: 15%;
+}
+
+.note-title{
+  color: white;
+}
+
+.note-title-bg{
+background-color: black;
+}
+
+.note-show-div{
+  position: fixed;
+  width: 750px;
+  height: 500px;
+  top: 50%;
+  left: 45%;
+  margin-top: -300px; /* Negative half of height. */
+  margin-left: -250px; /* Negative half of width. */
+}
+
+.note-memo{
+background-color: #fdfd96;
+height: 100%;
+word-wrap: break-word;
+overflow:scroll
+}
+
+.delete-button-container{
+  /* position: absolute;
+  bottom: 0px;
+  border:  dotted blue; */
+  
+}
+
+
 

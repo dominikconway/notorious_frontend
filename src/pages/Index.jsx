@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import Spinner from 'react-bootstrap/Spinner';
 
 function Index({createNotes, notes}) {
 
@@ -43,15 +44,19 @@ function Index({createNotes, notes}) {
           <h3>{note.date}</h3>
             </div>
           </div>
-          {/* <button type='button' className='btn btn-danger' id='delete' onClick>delete</button> */}
         </div>
         
       ))
     }
   
     const loading = () => {
-      return <h1>Loading...</h1>
+      return (
+        <Spinner animiation='border' role='status'>
+          <span className='visually-hidden'>Loading...</span>
+        </Spinner>
+      )
     }
+    
   
     return (
       <section>

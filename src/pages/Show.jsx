@@ -1,5 +1,7 @@
 import { useNavigate, useParams } from 'react-router-dom'
 import { useState } from 'react';
+import Container from 'react-bootstrap/Container';
+
 
 function Show({notes, updateNotes, deleteNote}) {
 
@@ -32,12 +34,18 @@ function Show({notes, updateNotes, deleteNote}) {
 }
 
   return (
-    <div className="note">
-      <h1>{note.title}</h1>
-      <h2>{note.memo}</h2>
-      {<button type='button' className='btn btn-danger' id='delete' onClick={removeNote}>DELETE Note</button>}
-      <br />
-      <form onSubmit={handleSubmit}>
+    <div className="note-show-div">
+      
+        <div className='note-title-bg'>
+          <h1 className='note-title'>{note.title}</h1>
+        </div>
+        <div className='note-memo'>
+          <h2>{note.memo}</h2>
+        </div>
+        <div className='delete-button-container'>
+          {<button type='button' className='btn btn-danger' id='delete' onClick={removeNote}>DELETE Note</button>}
+        </div>
+      <form className='update-note-form' onSubmit={handleSubmit}>
         <input
           type="text"
           value={editForm.title}
