@@ -36,6 +36,7 @@ function Show({notes, updateNotes, deleteNote}) {
       <h1>{note.title}</h1>
       <h2>{note.memo}</h2>
       {<button type='button' className='btn btn-danger' id='delete' onClick={removeNote}>DELETE Note</button>}
+      <br />
       <form onSubmit={handleSubmit}>
         <input
           type="text"
