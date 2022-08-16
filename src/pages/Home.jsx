@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 
 function Home() {
     return(
@@ -5,7 +6,7 @@ function Home() {
         <h1 class="display-4">Welcome to NotoriouS NoteS</h1>
         <p class="lead">One-Stop-Shop for your Note(S) taking Needs.</p>
 
-        <a class="btn btn-primary btn-lg" href="/notes" role="button">Take me to my Notes</a>
+        <Link class="btn btn-primary btn-lg" to="/notes">Take me to my Notes</Link>
       </div>
     )
 }
