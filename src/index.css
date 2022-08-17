@@ -13,32 +13,54 @@ code {
     monospace;
 }
 
+/* index page */
+
 .add-note-icon {
   max-width: 70px;
 }
 
-.link-img-bg{
-  width: 70px;
-  height: 0px;
+.title-link{
+  text-decoration: none;
+  color: white;
+  background-color: black;
 }
 
-.link{
+.date-div{
+  display: flex;
+  font-size: 20px;
+}
+
+.add-note-form{
+  padding: 50px;
+}
+
+.notes-list{
+  padding-left: 500px;
+  padding-right: 500px;
+  padding-top: 20px;
+}
+
+.notes-body{
+  background-color:#fdfd96 ;
+  overflow:scroll
+}
+
+.header-title{
+  font-size: 50px;
+  font-family: 'Oleo Script Swash Caps', cursive;
   text-decoration: none;
-  color: lightblue;
 }
 
 #home{
   padding-top: 15%;
 }
 
+/* show page */
+
 .note-show-div{
-  position: fixed;
-  width: 750px;
-  height: 500px;
-  top: 40%;
-  left: 45%;
-  margin-top: -300px; /* Negative half of height. */
-  margin-left: -250px; /* Negative half of width. */
+  padding-left: 500px;
+  padding-right: 500px;
+  padding-top: 40px;
 }
 
 .note-title{

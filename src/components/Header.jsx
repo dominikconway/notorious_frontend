@@ -7,8 +7,8 @@ function Header() {
     return (
         <Navbar bg='primary' variant='dark'>
           <Container>
-            <Link className='link' to="/">
-              <Navbar.Brand>Notorious Notes</Navbar.Brand>
+            <Link className='header-title' to="/">
+              <Navbar.Brand className='fs-1'>Notorious Notes</Navbar.Brand>
             </Link>
               <Nav className='justify-content-end'>
                 <Nav.Link>

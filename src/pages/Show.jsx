@@ -35,15 +35,6 @@ function Show({notes, updateNotes, deleteNote}) {
 
   return (
     <div className="note-show-div">
-        <div className='note-title-bg'>
-          <h1 className='note-title'>{note.title}</h1>
-        </div>
-        <div className='note-memo'>
-          <h2>{note.memo}</h2>
-        </div>
-        <div className='delete-button-container'>
-          {<button type='button' className='btn btn-outline-danger' id='delete' onClick={removeNote}>DELETE Note</button>}
-        </div>
       <form className='update-note-form' onSubmit={handleSubmit}>
         <div className='hstack gap-3'>
         <input className='form-control me-auto'
@@ -70,8 +61,17 @@ function Show({notes, updateNotes, deleteNote}) {
           onChange={handleChange}
         />
         <input type="submit" class="btn btn-secondary" value= "Update Note" />
+        {<button type='button' className='btn btn-outline-danger' id='delete' onClick={removeNote}>DELETE Note</button>}
         </div>
       </form>
+        <div className='note-title-bg'>
+          <h1 className='note-title'>{note.title}</h1>
+        </div>
+        <div className='note-memo'>
+          <h2>{note.memo}</h2>
+        </div>
+        
+      
     </div>
   )
 }

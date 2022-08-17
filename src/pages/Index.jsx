@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
-import Spinner from 'react-bootstrap/Spinner';
 
 function Index({createNotes, notes}) {
 
@@ -34,26 +33,30 @@ function Index({createNotes, notes}) {
     // loaded function
     const loaded = () => {
       return notes.map((note) => (
+      <div className='notes-list'>
         <div key={note._id} className='row row-cols-2 row-cols-md-1'>
           <div className='row row-cols'>
             <div className='card'>
-          <Link className='link' to={`/notes/${note._id}`}>
+          <Link className='title-link' to={`/notes/${note._id}`}>
             <h1>{note.title}</h1>
+            <div className='date-div'>{note.date.slice(0,10)}</div>
           </Link>
-          <h3>{note.memo}</h3>
-          <h3>{note.date}</h3>
+          <div className='notes-body'>
+            
+            <h3>{note.memo}</h3>
+          </div>
             </div>
           </div>
         </div>
-        
+      </div>
       ))
     }
   
     const loading = () => {
       return (
-        <Spinner animiation='border' role='status'>
+        <div animiation='spinner-border' role='status'>
           <span className='visually-hidden'>Loading...</span>
-        </Spinner>
+        </div>
       )
     }
     
