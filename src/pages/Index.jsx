@@ -89,7 +89,7 @@ function Index({createNotes, notes}) {
             required
             onChange={handleChange}
           />
-          <input type="submit" class="btn btn-secondary" value="Create Note" />
+          <input type="submit" class="btn btn-success" value="Create Note" />
           </div>
         </form>
         

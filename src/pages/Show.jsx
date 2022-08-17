@@ -60,12 +60,13 @@ function Show({notes, updateNotes, deleteNote}) {
           placeholder="date"
           onChange={handleChange}
         />
-        <input type="submit" class="btn btn-secondary" value= "Update Note" />
+        <input type="submit" class="btn btn-success" value= "Update Note" />
         {<button type='button' className='btn btn-outline-danger' id='delete' onClick={removeNote}>DELETE Note</button>}
         </div>
       </form>
         <div className='note-title-bg'>
           <h1 className='note-title'>{note.title}</h1>
+          <div className='date-div-show'>{note.date.slice(0,10)}</div>
         </div>
         <div className='note-memo'>
           <h2>{note.memo}</h2>

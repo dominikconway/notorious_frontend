@@ -6,7 +6,7 @@ function Home() {
         <h1 class="display-4">Welcome to NotoriouS NoteS</h1>
         <p class="lead">One-Stop-Shop for your Note(S) taking Needs.</p>
 
-        <Link class="btn btn-primary btn-lg" to="/notes">Take me to my Notes</Link>
+        <Link class="btn btn-primary btn-lg" to="/notes">My NoteS</Link>
       </div>
     )
 }

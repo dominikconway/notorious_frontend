@@ -42,7 +42,8 @@ code {
 
 .notes-body{
   background-color:#fdfd96 ;
-  overflow:scroll
+  overflow:hidden;
+  height: 300px;
 }
 
 .header-title{
@@ -71,11 +72,17 @@ code {
 background-color: black;
 }
 
+.date-div-show{
+  display: flex;
+  color: white;
+  font-size: 20px;
+}
+
 .note-memo{
 background-color: #fdfd96;
-height: 100%;
+height: 700px;
 word-wrap: break-word;
-overflow:scroll
+overflow:scroll;
 }
 
 
